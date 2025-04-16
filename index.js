@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         (item) => item.id.split("s")[1] === itemCanvas.id.split("s")[1]
       );
       activeItemsCanvas[activeItem].style.backgroundColor = DEFAULT_COLOR;
-      activeItemsCanvas.slice(activeItem, 1);
+      activeItemsCanvas.splice(activeItem, 1);
     }
   }
 
