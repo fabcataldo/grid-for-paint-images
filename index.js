@@ -107,5 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cell.style.backgroundColor = activeColor;
     }
   }
-  createAndDrawCanvas();
+
+  requestAnimationFrame(() => {
+    createAndDrawCanvas();
+  });
 });
