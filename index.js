@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     let hideModalTimeout;
-    modal.addEventListener("mouseleave", (e) => {
+    modal.addEventListener("mouseleave", () => {
       hideModalTimeout = setTimeout(() => {
         modal.style.display = "none";
       }, 200);
@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function setBtnColorModalChooser(indexBtn, btnItemCanvas) {
+  function setBtnColorModalChooser(indexBtn) {
     let colorBtn = document.getElementById(`color${indexBtn}`);
-    colorBtn.onclick = function (e) {
+    colorBtn.onclick = function () {
       activeColor = COLORS[indexBtn];
       paintActiveCells();
       modal.style.display = "none";
